@@ -22,4 +22,6 @@ WORKDIR /app
 HEALTHCHECK --interval=5s --timeout=1s \
   CMD curl -f http://127.0.0.1:8080/ping/ || exit 1
 
+EXPOSE 80
+
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
